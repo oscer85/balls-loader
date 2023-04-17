@@ -1,0 +1,172 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+.particles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    filter: url(#goo);
+    
+}
+
+.particle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+
+.particle-one {
+    background: #82c9fc;
+    animation: ballTop 6s ease infinite;
+}
+
+.particle-two {
+    background: #1c9ffd;
+    animation: ballDown 6s ease infinite;
+}
+
+.shadow {
+    position: absolute;
+    width: 55px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: 200px;
+    background: rgb(239, 238, 238);
+    filter: blur(5px);
+}
+
+.shadow-one{
+    animation:shadowRight 6s ease-out infinite;
+}
+
+.shadow-two{
+    animation:shadowLeft 6s ease-out infinite;
+}
+
+
+@keyframes ballDown {
+    0% {
+        transform: translateY(0);
+        
+}
+
+    25% {
+        transform: translateY(38px);
+       
+}
+
+    50% {
+        transform: translatex(40px);
+        
+}
+
+    75% {
+        transform: translate(0 -38px);
+       
+}
+
+    100% {
+        transform: translateY(0);
+        
+}
+}
+
+@keyframes ballTop {
+    0% {
+        transform: translateY(0);
+        
+}
+
+    25% {
+        transform: translateY(-38px);
+        
+}
+
+    50% {
+        transform: translateX(-40px);
+        
+}
+
+    75% {
+        transform: translate(0 38px);
+
+}
+
+    100% {
+        transform: translateY(0);
+       
+}
+}
+
+
+
+@keyframes shadowRight{
+    0%{
+        transform: translateX(0) scale(.6);
+        opacity: .4;
+        
+}
+
+    25%{
+       transform: scale(1);
+       opacity: 1;
+      
+}
+    50%{ 
+        transform: translateX(-40px) scale(.6);
+        opacity: .4;
+        
+}
+
+    75%{
+        transform: scale(.6);
+        opacity: .4;
+}
+    100%{
+        transform: translateX(0) scale(.6);
+        opacity: .4;
+        
+}
+}
+
+@keyframes shadowLeft{
+    0%{
+        transform: translatex(0) scale(.6);
+        opacity: .4;
+        
+}
+
+    25%{
+        transform: scale(1);
+        opacity: 1;
+      
+}
+    50%{
+        transform: translateX(40px) scale(.6); 
+        opacity: .4;
+        
+}
+    75%{
+        transform: scale(.6);
+        opacity: .4;
+}
+    100%{
+        transform: translateX(0) scale(.6);
+        opacity: .4;
+        
+}
+}
